@@ -43,6 +43,12 @@ namespace DatabaseCompare.Models
         public string HiLimit { get; set; }
         public string LoLimit { get; set; }
         public string LoLoLimit { get; set; }
+        public string PointClass { get; set; }
+        public string PointSubClass { get; set; }
+        public string Station { get; set; }
+        public string ShortDesc { get; set; }
+        public string WellUnit { get; set; }
+        public string DisplayOrder { get; set; }
         public override bool Equals(object obj)
         {
             return this.Equals(obj as Analog);

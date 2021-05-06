@@ -7,6 +7,7 @@
             "name ",
             "rtu ",                                         
             "group ",
+            "station ",
             "flag.bmsg ",
             "flag.priorityDisplay ",
             "flag.safety ",
@@ -34,7 +35,12 @@
             "abnrm_state_alm[0] ",
             "abnrm_state_alm[1] ",
             "abnrm_state_alm[2] ",
-            "abnrm_state_alm[3] "
+            "abnrm_state_alm[3] ",
+            "pointClass ",
+            "pointSubClass ",
+            "wellunit ",
+            "displayOrder ",
+            "shortDesc "
         };
     }
 }

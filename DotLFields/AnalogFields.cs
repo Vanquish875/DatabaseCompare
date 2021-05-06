@@ -6,7 +6,8 @@
         {
             "name ",
             "rtu ",
-            "group ", 
+            "group ",
+            "station ",
             "flag.bmsg ",
             "flag.priorityDisplay ",
             "flag.safety ",
@@ -43,6 +44,11 @@
             "sptlolim ",
             "spthilim ",
             "description ",
+            "pointClass ",
+            "pointSubClass ",
+            "shortDesc ",
+            "wellunit ",
+            "displayOrder "
         };
     }
 }

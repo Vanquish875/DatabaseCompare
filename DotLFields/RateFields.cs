@@ -7,12 +7,15 @@
             "name ",
             "rtu ",
             "group ",
+            "station ",
             "flag.bmsg ",
             "flag.priorityDisplay ",
             "flag.safety ",
             "accin.iospec.external ",
+            "accin.iospec.xmod_format ",
             "accin.type ",
             "intype ",
+            "pointtype ",
             "hilo.lolim ",
             "hilo.hilim ",
             "hilo.lololim ",
@@ -21,7 +24,9 @@
             "hilo.doithihi ",
             "hilo.doitlo ",
             "hilo.doitlolo ",
+            "rollover ",
             "anain.iospec.external ",
+            "anain.iospec.xmod_format ",
             "anain.type ",
             "engr.rawmin ",
             "engr.rawmax ",
@@ -30,7 +35,12 @@
             "engr.scaleraw ",
             "dunits ",
             "runits ",
-            "description "
+            "description ",
+            "pointClass ",
+            "pointSubClass ",
+            "shortDesc ",
+            "displayOrder ",
+            "wellunit "
         };
     }
 }

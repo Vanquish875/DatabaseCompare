@@ -49,5 +49,34 @@
         public string AbnormalState2 { get; set; }
         public string AbnormalState3 { get; set; }
         public string SOEPoint { get; set; } = "no";
+        public string Command1 { get; set; } //Need to map this point.
+        public string Command2 { get; set; } //Need to map this point.
+        public string PointClass { get; set; }
+        public string PointSubClass { get; set; }
+        public string Station { get; set; }
+        public string WellUnit { get; set; }
+        public string DisplayOrder { get; set; }
+        public string ShortDescription { get; set; }
+        public string AlertGroup { get; set; } = "";
+        public string EnableEmailAlarm { get; set; } = "no";
+        public string AdhocMsgforEmail { get; set; } = "";
+        public string EnableCOSAlert { get; set; } = "no";
+        public string EnableSCADAAlarmSubject { get; set; } = "no";
+        public string PointCndEnable { get; set; } = "no";
+        public string MaxPeriodOfTime { get; set; } = "0";
+        public string WarnMode { get; set; } = "no";
+        public string AnalogInterlockEnable { get; set; } = "no";
+        public string StatusInterlockEnable { get; set; } = "no";
+        public string MultistateInterlockEnable { get; set; } = "no";
+        public string InterlockAnalog { get; set; } = "";
+        public string InterlockStatus { get; set; } = "";
+        public string InterlockMultistate { get; set; } = "";
+        public string InterlockAnalogStateString { get; set; } = "";
+        public string InterlockStatusStateString { get; set; } = "";
+        public string InterlockMultistateString { get; set; } = "";
+        public string MultiControlGroup { get; set; } = "";
+        public string ControlScanType { get; set; } = "";
+        public string ControlScanFrequency { get; set; } = "0";
+        public string ControlScanInterval { get; set; } = "0";
     }
 }

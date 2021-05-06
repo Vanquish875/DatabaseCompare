@@ -36,6 +36,12 @@ namespace DatabaseCompare.Models
         public string AbnormalState1 { get; set; }
         public string AbnormalState2 { get; set; }
         public string AbnormalState3 { get; set; }
+        public string PointClass { get; set; }
+        public string PointSubClass { get; set; }
+        public string Station { get; set; }
+        public string WellUnit { get; set; }
+        public string DisplayOrder { get; set; }
+        public string ShortDescription { get; set; }
 
         public override bool Equals(object obj)
         {

@@ -62,12 +62,12 @@
         public string Dataset { get; set; } = "no"; //Add logic for this.
         public string RepDeadband { get; set; } = "0";
         public string ApplyLinearFilter { get; set; } = "no";
-        public string PointClass { get; set; } = "All";
-        public string PointSubClass { get; set; } = "All";
-        public string Station { get; set; } = "";
-        public string ShortDesc { get; set; } = "";
-        public string WellUnit { get; set; } = "";
-        public string DisplayOrder { get; set; } = "0";
+        public string PointClass { get; set; }
+        public string PointSubClass { get; set; }
+        public string Station { get; set; }
+        public string ShortDesc { get; set; }
+        public string WellUnit { get; set; }
+        public string DisplayOrder { get; set; }
         public string HiHi1 { get; set; } = "no";
         public string Hi1 { get; set; } = "no";
         public string Lo2 { get; set; } = "no";
@@ -79,5 +79,17 @@
         public string MaxPeriodOfTime { get; set; } = "0";
         public string WarnMode { get; set; } = "no";
         public string AnalogInterlockEnable { get; set; } = "no";
+        public string StatusInterlockEnable { get; set; } = "no";
+        public string MultistateInterlockEnable { get; set; } = "no";
+        public string InterlockAnalog { get; set; } = "";
+        public string InterlockStatus { get; set; } = "";
+        public string InterlockMultistate { get; set; } = "";
+        public string InterlockAnalogStateString { get; set; } = "";
+        public string InterlockStatusStateString { get; set; } = "";
+        public string InterlockMultistateString { get; set; } = "";
+        public string MultiControlGroup { get; set; } = "";
+        public string ControlScanType { get; set; } = "";
+        public string ControlScanFrequency { get; set; } = "0";
+        public string ControlScanInterval { get; set; } = "0";
     }
 }

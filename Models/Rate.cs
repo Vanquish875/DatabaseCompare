@@ -12,12 +12,16 @@ namespace DatabaseCompare.Models
         public string MinEGU { get; set; }
         public string MaxEGU { get; set; }
         public string SourceOfData { get; set; }
+        public string PointType { get; set; }
         public string PriorityDisplay { get; set; }
         public string SafetyRelated { get; set; }
         public string PulseInputCoordinates { get; set; }
+        public string PulseInputFormat { get; set; }
         public string PulseInputType { get; set; }
+        public string PulseInRollover { get; set; }
         public string AnalogInputType { get; set; }
         public string AnalogInputCoordinates { get; set; }
+        public string AnalogInputFormat { get; set; }
         public string ConvertRawToEGU { get; set; }
         public string MinRaw { get; set; }
         public string MaxRaw { get; set; }
@@ -31,6 +35,12 @@ namespace DatabaseCompare.Models
         public string HiLimit { get; set; }
         public string LoLimit { get; set; }
         public string LoLoLimit { get; set; }
+        public string PointClass { get; set; }
+        public string PointSubClass { get; set; }
+        public string Station { get; set; }
+        public string ShortDesc { get; set; }
+        public string DisplayOrder { get; set; }
+        public string WellUnit { get; set; }
 
         public override bool Equals(object obj)
         {
