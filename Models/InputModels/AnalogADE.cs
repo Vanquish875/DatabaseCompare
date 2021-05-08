@@ -12,6 +12,7 @@
         public string PriorityDisplay { get; set; }
         public string EnableRealarm { get; set; } = "0";
         public string SafetyRelated { get; set; }
+        public string PtStale1 { get; set; } = "";
         public string SetptTolerance { get; set; } = "0";
         public string PointType { get; set; }
         public string HasInput { get; set; }

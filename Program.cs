@@ -20,6 +20,7 @@ namespace DatabaseCompare
                 Console.WriteLine("Provide PCC if you wish to compare the points in the main system with the secondary system.");
                 Console.WriteLine("Use -t to generate list of points in one system but not the other.");
                 Console.WriteLine("Use -r to generate list of configurations of each system that don't match the system specfied.");
+                Console.WriteLine("Use -i to generate ADE insert files for the points in one system but not the other.");
                 Console.WriteLine(@"Example: C:\Temp\DotLFiles tnd -t");
                 Console.ReadLine();
             }
@@ -49,6 +50,13 @@ namespace DatabaseCompare
                     return;
                 }
 
+                if(WhatTask.Equals("-I"))
+                {
+                    var prog = new Program();
+                    prog.CompareSystemsPointsAndAddADEInserts(WhatSystem, FilePath);
+                    return;
+                }
+
                 if(WhatTask.Equals("-H"))
                 {
                     Console.WriteLine("Use -t to generate list of points in one system but not the other.");
@@ -68,14 +76,14 @@ namespace DatabaseCompare
             if(system.Equals("TND"))
             {
                 PointCountCompare compare = new PointCountCompare();
-                compare.CompareTNDToPCC(filePath);
+                compare.CompareTNDToPCC(filePath, false);
                 return;
             }
 
             if(system.Equals("PCC"))
             {
                 PointCountCompare compare = new PointCountCompare();
-                compare.ComparePCCToTND(filePath);
+                compare.ComparePCCToTND(filePath, false);
             }
         }
 
@@ -92,6 +100,22 @@ namespace DatabaseCompare
             {
                 var compare = new PrintPCCPointConfigurationCompare();
                 compare.PrintPCCToTND(filePath);
+            }
+        }
+
+        public void CompareSystemsPointsAndAddADEInserts(string system, string filePath)
+        {
+            if (system.Equals("TND"))
+            {
+                PointCountCompare compare = new PointCountCompare();
+                compare.CompareTNDToPCC(filePath, true);
+                return;
+            }
+
+            if (system.Equals("PCC"))
+            {
+                PointCountCompare compare = new PointCountCompare();
+                compare.ComparePCCToTND(filePath, true);
             }
         }
     }

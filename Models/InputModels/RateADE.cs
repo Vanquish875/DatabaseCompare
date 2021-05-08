@@ -21,7 +21,7 @@
         public string PollGroupPulseInput { get; set; } = "";
         public string PulseInputType { get; set; }
         public string SourceOfData { get; set; }
-        public string EnableAccum { get; set; } = "no"; //Maybe need to map this.
+        public string EnableAccum { get; set; }
         public string PointType { get; set; }
         public string ApplyFilter { get; set; } = "no";
         public string ROCAlarm { get; set; } = "no";
@@ -64,6 +64,7 @@
         public string Pressure { get; set; } = "";
         public string Scale { get; set; } = "0";
         public string ReplicationDeadband { get; set; } = "1";
+        public string LFilterConstant { get; set; } = "1";
         public string Consta { get; set; } = "0";
         public string PointClass { get; set; }
         public string PointSubClass { get; set; }

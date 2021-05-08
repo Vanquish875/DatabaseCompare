@@ -15,6 +15,7 @@
             "accin.iospec.xmod_format ",
             "accin.type ",
             "intype ",
+            "sw ",
             "pointtype ",
             "hilo.lolim ",
             "hilo.hilim ",

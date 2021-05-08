@@ -12,6 +12,7 @@ namespace DatabaseCompare.Models
         public string MinEGU { get; set; }
         public string MaxEGU { get; set; }
         public string SourceOfData { get; set; }
+        public string EnableAccum { get; set; }
         public string PointType { get; set; }
         public string PriorityDisplay { get; set; }
         public string SafetyRelated { get; set; }
