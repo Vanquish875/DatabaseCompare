@@ -5,10 +5,10 @@
         public string Name { get; set; }
         public string RTU { get; set; }
         public string DataSet { get; set; } //Add logic for this.
-        public string InhibitAbnormalAlarm { get; set; } = "no";
-        public string InhibitNormalAlarm { get; set; } = "yes";
-        public string InhibitAbnormalLog { get; set; } = "no";
-        public string InhibitNormalLog { get; set; } = "no";
+        public string InhibitAbnormalAlarm { get; set; }
+        public string InhibitNormalAlarm { get; set; }
+        public string InhibitAbnormalLog { get; set; }
+        public string InhibitNormalLog { get; set; }
         public string BaseMessage { get; set; }
         public string PriorityDisplay { get; set; }
         public string EnableRealarm { get; set; } = "0";

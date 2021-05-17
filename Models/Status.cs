@@ -7,6 +7,10 @@ namespace DatabaseCompare.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public string Group { get; set; }
+        public string InhibitAbnormalAlarm { get; set; }
+        public string InhibitNormalAlarm { get; set; }
+        public string InhibitAbnormalLog { get; set; }
+        public string InhibitNormalLog { get; set; }
         public string BaseMessage { get; set; }
         public string RTU { get; set; }
         public string PriorityDisplay { get; set; }

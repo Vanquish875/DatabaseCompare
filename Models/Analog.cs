@@ -9,6 +9,10 @@ namespace DatabaseCompare.Models
         public string SafetyRelated { get; set; }
         public string Group { get; set; }
         public string RTU { get; set; }
+        public string OffNormalAlarm { get; set; }
+        public string NormalAlarm { get; set; }
+        public string OffNormalLog { get; set; }
+        public string NormalLog { get; set; }
         public string BaseMessage { get; set; }
         public string EngineeringUnits { get; set; }
         public string PriorityDisplay { get; set; }
@@ -16,7 +20,7 @@ namespace DatabaseCompare.Models
         public string HasInput { get; set; }
         public string InputType { get; set; }
         public string InputCoordinates { get; set; }
-        public string InputFormat { get; set; }
+        //public string InputFormat { get; set; }
         public string ConvertRawToEGU { get; set; }
         public string MinRaw { get; set; }
         public string MaxRaw { get; set; }
@@ -25,7 +29,7 @@ namespace DatabaseCompare.Models
         public string HasOutput { get; set; }
         public string OutputType { get; set; }
         public string OutputCoordinates { get; set; }
-        public string OutputFormat { get; set; }
+        //public string OutputFormat { get; set; }
         public string CMDTimeout { get; set; }
         public string LogCmdSuccess { get; set; }
         public string OutConvertRawToEGU { get; set; }

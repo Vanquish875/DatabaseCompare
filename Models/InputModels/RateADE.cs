@@ -6,10 +6,10 @@
         public string RTU { get; set; }
         public string Group { get; set; }
         public string Dataset { get; set; } //Create logic for this.
-        public string OffNormalAlarm { get; set; } = "no";
-        public string NormalAlarm { get; set; } = "yes";
-        public string OffNormalLog { get; set; } = "no";
-        public string NormalLog { get; set; } = "no";
+        public string OffNormalAlarm { get; set; }
+        public string NormalAlarm { get; set; }
+        public string OffNormalLog { get; set; }
+        public string NormalLog { get; set; }
         public string BaseMessage { get; set; }
         public string PriorityDisplay { get; set; }
         public string EnableReAlarm { get; set; } = "0";
@@ -17,7 +17,7 @@
         public string PtStale1 { get; set; } = "";
         public string PulseInTimeBetweenCalcs { get; set; }
         public string PulseInputCoordinates { get; set; }
-        public string PulseInputFormat { get; set; }
+        public string PulseInputFormat { get; set; } = "0";
         public string PollGroupPulseInput { get; set; } = "";
         public string PulseInputType { get; set; }
         public string SourceOfData { get; set; }
@@ -43,7 +43,7 @@
         public string PulseInRollover { get; set; }
         public string PulseInMeterFctr { get; set; } = "1";
         public string AnalogInputCoordinates { get; set; }
-        public string AnalogInputFormat { get; set; }
+        public string AnalogInputFormat { get; set; } = "0";
         public string AnalogPollGroup { get; set; } = "";
         public string ExcpDeadBand { get; set; } = "0";
         public string AnalogInputType { get; set; }

@@ -4,10 +4,10 @@
     {
         public string Name { get; set; }
         public string Remote { get; set; }
-        public string OffNormalAlarm { get; set; } = "no";
-        public string NormalAlarm { get; set; } = "yes";
-        public string OffNormalLog { get; set; } = "no";
-        public string NormalLog { get; set; } = "no";
+        public string OffNormalAlarm { get; set; }
+        public string NormalAlarm { get; set; }
+        public string OffNormalLog { get; set; }
+        public string NormalLog { get; set; }
         public string BaseMessage { get; set; }
         public string PriorityDisplay { get; set; }
         public string EnableRealarm { get; set; } = "0";
@@ -43,7 +43,7 @@
         public string DeviationAlarmLimit { get; set; } = "0";
         public string Group { get; set; }
         public string InputCoordinates { get; set; }
-        public string InputFormat { get; set; }
+        public string InputFormat { get; set; } = "0";
         public string PollGroup { get; set; } = "";
         public string ExceptionDeadband { get; set; } = "0";
         public string InputType { get; set; }
@@ -53,7 +53,7 @@
         public string OutMaxEGU { get; set; }
         public string OutConvertRawToEGU { get; set; }
         public string OutputCoordinates { get; set; }
-        public string OutputFormat { get; set; }
+        public string OutputFormat { get; set; } = "0";
         public string CMDTimeout { get; set; }
         public string LogCmdSuccess { get; set; }
         public string SetpointLowLimit { get; set; }

@@ -31,9 +31,10 @@ namespace DatabaseCompare.DBCompare
             var statuses = _checkIfExists.CheckIfPointExists(_parser.FindNamesList(FilePath + PCCSTATUS), _parser.FindNamesHash(FilePath + TNDSTATUS));
             var remotes = _checkIfExists.CheckIfPointExists(_parser.FindNamesList(FilePath + PCCREMOTE), _parser.FindNamesHash(FilePath + TNDREMOTE));
 
-            if(IsADEInserts)
+            if (IsADEInserts)
             {
                 var manageADE = new ManageADEInsert();
+
                 manageADE.ManageInsertForPCCToTND(FilePath, analogs, rates, statuses);
             }
 
