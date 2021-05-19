@@ -21,12 +21,10 @@ namespace DatabaseCompare.Models
         public string PriorityDisplay { get; set; }
         public string SafetyRelated { get; set; }
         public string PulseInputCoordinates { get; set; }
-        //public string PulseInputFormat { get; set; }
         public string PulseInputType { get; set; }
         public string PulseInRollover { get; set; }
         public string AnalogInputType { get; set; }
         public string AnalogInputCoordinates { get; set; }
-        //public string AnalogInputFormat { get; set; }
         public string ConvertRawToEGU { get; set; }
         public string MinRaw { get; set; }
         public string MaxRaw { get; set; }
