@@ -2,7 +2,7 @@
   "profiles": {
     "DatabaseCompare": {
       "commandName": "Project",
-      "commandLineArgs": "D:\\Marathon\\dbCompare pcc -i"
+      "commandLineArgs": "D:\\Marathon\\dbCompare pcc -t"
     }
   }
 }
