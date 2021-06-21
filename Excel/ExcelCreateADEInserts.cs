@@ -11,51 +11,45 @@ namespace DatabaseCompare.Excel
         {
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
 
-            using (ExcelPackage excel = new ExcelPackage())
-            {
-                excel.Workbook.Worksheets.Add("analog");
+            using ExcelPackage excel = new ExcelPackage();
+            excel.Workbook.Worksheets.Add("analog");
 
-                var AnalogWorksheet = excel.Workbook.Worksheets["analog"];
+            var AnalogWorksheet = excel.Workbook.Worksheets["analog"];
 
-                AnalogWorksheet.Cells.LoadFromCollection(analogs, true);
+            AnalogWorksheet.Cells.LoadFromCollection(analogs, true);
 
-                FileInfo excelFile = new FileInfo(filePath + @"\" + name + ".xlsx");
-                excel.SaveAs(excelFile);
-            }
+            FileInfo excelFile = new FileInfo(filePath + @"\" + name + ".xlsx");
+            excel.SaveAs(excelFile);
         }
 
         public void WriteRateToExcel(string filePath, string name, List<RateADE> rates)
         {
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
 
-            using (ExcelPackage excel = new ExcelPackage())
-            {
-                excel.Workbook.Worksheets.Add("rate");
+            using ExcelPackage excel = new ExcelPackage();
+            excel.Workbook.Worksheets.Add("rate");
 
-                var RateWorksheet = excel.Workbook.Worksheets["rate"];
+            var RateWorksheet = excel.Workbook.Worksheets["rate"];
 
-                RateWorksheet.Cells.LoadFromCollection(rates, true);
+            RateWorksheet.Cells.LoadFromCollection(rates, true);
 
-                FileInfo excelFile = new FileInfo(filePath + @"\" + name + ".xlsx");
-                excel.SaveAs(excelFile);
-            }
+            FileInfo excelFile = new FileInfo(filePath + @"\" + name + ".xlsx");
+            excel.SaveAs(excelFile);
         }
 
         public void WriteStatusToExcel(string filePath, string name, List<StatusADE> statuses)
         {
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
 
-            using (ExcelPackage excel = new ExcelPackage())
-            {
-                excel.Workbook.Worksheets.Add("status");
+            using ExcelPackage excel = new ExcelPackage();
+            excel.Workbook.Worksheets.Add("status");
 
-                var DigitalWorksheet = excel.Workbook.Worksheets["status"];
+            var DigitalWorksheet = excel.Workbook.Worksheets["status"];
 
-                DigitalWorksheet.Cells.LoadFromCollection(statuses, true);
+            DigitalWorksheet.Cells.LoadFromCollection(statuses, true);
 
-                FileInfo excelFile = new FileInfo(filePath + @"\" + name + ".xlsx");
-                excel.SaveAs(excelFile);
-            }
+            FileInfo excelFile = new FileInfo(filePath + @"\" + name + ".xlsx");
+            excel.SaveAs(excelFile);
         }
     }
 }
