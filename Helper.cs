@@ -38,12 +38,12 @@ namespace DatabaseCompare
         {
             bool PCCAnalogDotLExists = File.Exists(path + @"\pcc\analog.l");
             bool PCCRateDotLExists = File.Exists(path + @"\pcc\rate.l");
-            bool PCCRemoteDotLExists = File.Exists(path + @"\pcc\Remote.l");
-            bool PCCStatusDotLExists = File.Exists(path + @"\pcc\Status.l");
+            bool PCCRemoteDotLExists = File.Exists(path + @"\pcc\remote.l");
+            bool PCCStatusDotLExists = File.Exists(path + @"\pcc\status.l");
             bool TNDAnalogDotLExists = File.Exists(path + @"\tnd\analog.l");
             bool TNDRateDotLExists = File.Exists(path + @"\tnd\rate.l");
-            bool TNDRemoteDotLExists = File.Exists(path + @"\tnd\Remote.l");
-            bool TNDStatusDotLExists = File.Exists(path + @"\tnd\Status.l");
+            bool TNDRemoteDotLExists = File.Exists(path + @"\tnd\remote.l");
+            bool TNDStatusDotLExists = File.Exists(path + @"\tnd\status.l");
 
             if (PCCAnalogDotLExists && PCCRateDotLExists && PCCRemoteDotLExists && PCCStatusDotLExists &&
                 TNDAnalogDotLExists && TNDRateDotLExists && TNDRemoteDotLExists && TNDStatusDotLExists)

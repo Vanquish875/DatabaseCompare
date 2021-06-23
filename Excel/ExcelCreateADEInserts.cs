@@ -1,5 +1,6 @@
 ﻿using DatabaseCompare.Models.InputModels;
 using OfficeOpenXml;
+using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -20,6 +21,7 @@ namespace DatabaseCompare.Excel
 
             FileInfo excelFile = new FileInfo(filePath + @"\" + name + ".xlsx");
             excel.SaveAs(excelFile);
+            Console.WriteLine($"Generated file: {filePath}\\{name}.xlsx");
         }
 
         public void WriteRateToExcel(string filePath, string name, List<RateADE> rates)
@@ -35,6 +37,7 @@ namespace DatabaseCompare.Excel
 
             FileInfo excelFile = new FileInfo(filePath + @"\" + name + ".xlsx");
             excel.SaveAs(excelFile);
+            Console.WriteLine($"Generated file: {filePath}\\{name}.xlsx");
         }
 
         public void WriteStatusToExcel(string filePath, string name, List<StatusADE> statuses)
@@ -50,6 +53,7 @@ namespace DatabaseCompare.Excel
 
             FileInfo excelFile = new FileInfo(filePath + @"\" + name + ".xlsx");
             excel.SaveAs(excelFile);
+            Console.WriteLine($"Generated file: {filePath}\\{name}.xlsx");
         }
     }
 }

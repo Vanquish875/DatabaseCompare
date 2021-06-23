@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using OfficeOpenXml;
 using System.IO;
+using System;
 
 namespace DatabaseCompare.Excel
 {
@@ -28,6 +29,7 @@ namespace DatabaseCompare.Excel
 
             FileInfo excelFile = new FileInfo(filepath + name + ".xlsx");
             excel.SaveAs(excelFile);
+            Console.WriteLine($"Generated file: {filepath}\\{name}.xlsx");
         }
     }
 }

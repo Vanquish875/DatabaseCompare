@@ -22,7 +22,8 @@ namespace DatabaseCompare
                 Console.WriteLine("Use -r to generate list of configurations of each system that don't match the system specfied.");
                 Console.WriteLine("Use -i to generate ADE insert files for the points in one system but not the other.");
                 Console.WriteLine(@"Example: C:\Temp\DotLFiles tnd -t");
-                Console.ReadLine();
+                Console.WriteLine("Each folder should contain at least: acecode.l, aceconfig.l, analog.l, connection.l, multistate.l, rate.l, remote.l, and status.l");
+                return;
             }
 
             if(Helper.CheckArguments(args))

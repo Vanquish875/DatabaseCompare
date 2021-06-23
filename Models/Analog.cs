@@ -8,7 +8,7 @@ namespace DatabaseCompare.Models
         public string Description { get; set; }
         public string SafetyRelated { get; set; }
         public string Group { get; set; }
-        public string RTU { get; set; }
+        public string Remote { get; set; }
         public string OffNormalAlarm { get; set; }
         public string NormalAlarm { get; set; }
         public string OffNormalLog { get; set; }
@@ -83,9 +83,9 @@ namespace DatabaseCompare.Models
                 this.Group.Equals(other.Group)
                 ) &&
                 (
-                object.ReferenceEquals(this.RTU, other.RTU) ||
-                this.RTU != null &&
-                this.RTU.Equals(other.RTU)
+                object.ReferenceEquals(this.Remote, other.Remote) ||
+                this.Remote != null &&
+                this.Remote.Equals(other.Remote)
                 ) &&
                 (
                 object.ReferenceEquals(this.BaseMessage, other.BaseMessage) ||
