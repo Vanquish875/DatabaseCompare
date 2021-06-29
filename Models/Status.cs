@@ -7,21 +7,45 @@ namespace DatabaseCompare.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public string Group { get; set; }
+        public string InhibitAbnormalAlarm { get; set; }
+        public string InhibitNormalAlarm { get; set; }
+        public string InhibitAbnormalLog { get; set; }
+        public string InhibitNormalLog { get; set; }
         public string BaseMessage { get; set; }
-        public string RTU { get; set; }
+        public string Remote { get; set; }
         public string PriorityDisplay { get; set; }
         public string SafetyRelated { get; set; }
         public string HasInput { get; set; }
+        public string InputType { get; set; }
+        public string AccumState { get; set; }
         public string NumberOfInputBits { get; set; }
         public string InputOneCoordinates { get; set; }
         public string InputOneBitNumber { get; set; }
+        public string InputOneNormallyOpen { get; set; }
         public string InputTwoCoordinates { get; set; }
         public string InputTwoBitNumber { get; set; }
+        public string InputTwoNormallyOpen { get; set; }
         public string HasOutput { get; set; }
-        public string CommandType1 { get; set; }
+        public string LogCMDSuccess { get; set; }
+        public string CommandOnType1 { get; set; }
+        public string CommandOnCmd1 { get; set; }
+        public string CommandOnCmdtimeout1 { get; set; }
         public string CommandCoordinates1 { get; set; }
-        public string CommandType2 { get; set; }
+        public string CommandOffType2 { get; set; }
+        public string CommandOffCmd2 { get; set; }
+        public string CommandOffCmdtimeout2 { get; set; }
         public string CommandCoordinates2 { get; set; }
+        public string SustainCOSAlarms { get; set; }
+        public string AbnormalState0 { get; set; }
+        public string AbnormalState1 { get; set; }
+        public string AbnormalState2 { get; set; }
+        public string AbnormalState3 { get; set; }
+        public string PointClass { get; set; }
+        public string PointSubClass { get; set; }
+        public string Station { get; set; }
+        public string WellUnit { get; set; }
+        public string DisplayOrder { get; set; }
+        public string ShortDescription { get; set; }
 
         public override bool Equals(object obj)
         {
@@ -55,9 +79,9 @@ namespace DatabaseCompare.Models
                 this.BaseMessage.Equals(other.BaseMessage)
                 ) &&
                 (
-                object.ReferenceEquals(this.RTU, other.RTU) ||
-                this.RTU != null &&
-                this.RTU.Equals(other.RTU)
+                object.ReferenceEquals(this.Remote, other.Remote) ||
+                this.Remote != null &&
+                this.Remote.Equals(other.Remote)
                 ) &&
                 (
                 object.ReferenceEquals(this.PriorityDisplay, other.PriorityDisplay) ||
@@ -105,9 +129,9 @@ namespace DatabaseCompare.Models
                 this.HasOutput.Equals(other.HasOutput)
                 ) &&
                 (
-                object.ReferenceEquals(this.CommandType1, other.CommandType1) ||
-                this.CommandType1 != null &&
-                this.CommandType1.Equals(other.CommandType1)
+                object.ReferenceEquals(this.CommandOnCmd1, other.CommandOnCmd1) ||
+                this.CommandOnCmd1 != null &&
+                this.CommandOnCmd1.Equals(other.CommandOnCmd1)
                 ) &&
                 (
                 object.ReferenceEquals(this.CommandCoordinates1, other.CommandCoordinates1) ||
@@ -115,9 +139,9 @@ namespace DatabaseCompare.Models
                 this.CommandCoordinates1.Equals(other.CommandCoordinates1)
                 ) &&
                 (
-                object.ReferenceEquals(this.CommandType2, other.CommandType2) ||
-                this.CommandType2 != null &&
-                this.CommandType2.Equals(other.CommandType2)
+                object.ReferenceEquals(this.CommandOffCmd2, other.CommandOffCmd2) ||
+                this.CommandOffCmd2 != null &&
+                this.CommandOffCmd2.Equals(other.CommandOffCmd2)
                 ) &&
                 (
                 object.ReferenceEquals(this.CommandCoordinates2, other.CommandCoordinates2) ||

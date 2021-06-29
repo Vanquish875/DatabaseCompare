@@ -1,7 +1,5 @@
 ﻿using DatabaseCompare.DBCompare;
 using DatabaseCompare.Excel;
-using DatabaseCompare.Models;
-using System.Collections.Generic;
 
 namespace DatabaseCompare.Print
 {
@@ -18,15 +16,10 @@ namespace DatabaseCompare.Print
 
         public void PrintTNDTOPCC(string FilePath)
         {
-            var Analogs = new Dictionary<Analog, Analog>();
-            var Rates = new Dictionary<Rate, Rate>();
-            var Statuses = new Dictionary<Status, Status>();
-            var Remotes = new Dictionary<Remote, Remote>();
-
-            Analogs = _pointConfigurationCompare.CompareTNDToPCCAnalog(FilePath);
-            Rates = _pointConfigurationCompare.CompareTNDToPCCRate(FilePath);
-            Statuses = _pointConfigurationCompare.CompareTNDToPCCStatus(FilePath);
-            Remotes = _pointConfigurationCompare.CompareTNDToPCCRemote(FilePath);
+            var Analogs = _pointConfigurationCompare.CompareTNDToPCCAnalog(FilePath);
+            var Rates = _pointConfigurationCompare.CompareTNDToPCCRate(FilePath);
+            var Statuses = _pointConfigurationCompare.CompareTNDToPCCStatus(FilePath);
+            var Remotes = _pointConfigurationCompare.CompareTNDToPCCRemote(FilePath);
 
             _excel.TNDTOPCCWriteToExcel(Analogs, Rates, Statuses, Remotes, FilePath);
         }

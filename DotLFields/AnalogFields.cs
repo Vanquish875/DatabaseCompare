@@ -6,10 +6,16 @@
         {
             "name ",
             "rtu ",
-            "group ", 
+            "group ",
+            "station ",
+            "flag.alminh ",
+            "flag.clrinh ",
+            "flag.evtinh ",
+            "flag.cevinh ",
             "flag.bmsg ",
             "flag.priorityDisplay ",
             "flag.safety ",
+            "pointtype ",
             "input ",
             "output ",
             "otype ",
@@ -28,6 +34,7 @@
             "hilow.doitlo ",
             "hilow.doitlolo ",
             "anain.iospec.external ",
+            //"anain.iospec.xmod_format ",
             "anain.type ",
             "oengr.rawmin ",
             "oengr.rawmax ",
@@ -35,9 +42,17 @@
             "oengr.egumax ",
             "oengr.scaleraw ",
             "anaout.iospec.external ",
+            //"anaout.iospec.xmod_format ",
+            "devtmr ",
+            "lgcmsc ",
             "sptlolim ",
             "spthilim ",
             "description ",
+            "pointClass ",
+            "pointSubClass ",
+            "shortDesc ",
+            "wellunit ",
+            "displayOrder "
         };
     }
 }

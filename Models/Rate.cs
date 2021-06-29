@@ -7,15 +7,22 @@ namespace DatabaseCompare.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public string Group { get; set; }
-        public string RTU { get; set; }
+        public string Remote { get; set; }
+        public string OffNormalAlarm { get; set; }
+        public string NormalAlarm { get; set; }
+        public string OffNormalLog { get; set; }
+        public string NormalLog { get; set; }
         public string BaseMessage { get; set; }
         public string MinEGU { get; set; }
         public string MaxEGU { get; set; }
         public string SourceOfData { get; set; }
+        public string EnableAccum { get; set; }
+        public string PointType { get; set; }
         public string PriorityDisplay { get; set; }
         public string SafetyRelated { get; set; }
         public string PulseInputCoordinates { get; set; }
         public string PulseInputType { get; set; }
+        public string PulseInRollover { get; set; }
         public string AnalogInputType { get; set; }
         public string AnalogInputCoordinates { get; set; }
         public string ConvertRawToEGU { get; set; }
@@ -31,6 +38,12 @@ namespace DatabaseCompare.Models
         public string HiLimit { get; set; }
         public string LoLimit { get; set; }
         public string LoLoLimit { get; set; }
+        public string PointClass { get; set; }
+        public string PointSubClass { get; set; }
+        public string Station { get; set; }
+        public string ShortDesc { get; set; }
+        public string DisplayOrder { get; set; }
+        public string WellUnit { get; set; }
 
         public override bool Equals(object obj)
         {
@@ -59,9 +72,9 @@ namespace DatabaseCompare.Models
                 this.Group.Equals(other.Group)
                 ) &&
                 (
-                object.ReferenceEquals(this.RTU, other.RTU) ||
-                this.RTU != null &&
-                this.RTU.Equals(other.RTU)
+                object.ReferenceEquals(this.Remote, other.Remote) ||
+                this.Remote != null &&
+                this.Remote.Equals(other.Remote)
                 ) &&
                 (
                 object.ReferenceEquals(this.BaseMessage, other.BaseMessage) ||
