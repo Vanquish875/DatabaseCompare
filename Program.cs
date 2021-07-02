@@ -20,7 +20,7 @@ namespace DatabaseCompare
                 Console.WriteLine("Provide PCC if you wish to compare the points in the main system with the secondary system.");
                 Console.WriteLine("Use -t to generate list of points in one system but not the other.");
                 Console.WriteLine("Use -r to generate list of configurations of each system that don't match the system specfied.");
-                Console.WriteLine("Use -i to generate ADE insert files for the points in one system but not the other.");
+                Console.WriteLine("Use -i to generate ADE insert files for the points in one system but not the other. Note: Only works for analog, rate, and status tables.");
                 Console.WriteLine(@"Example: C:\Temp\DotLFiles tnd -t");
                 Console.WriteLine("Each folder should contain at least: acecode.l, aceconfig.l, analog.l, connection.l, multistate.l, rate.l, remote.l, and status.l");
                 return;
