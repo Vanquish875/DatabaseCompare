@@ -34,7 +34,7 @@ namespace DatabaseCompare.Mapping.ADEMapping
                             PulseInputCoordinates = data[i + 11],
                             //PulseInputFormat = data[i + 12],
                             PulseInputType = data[i + 12],
-                            SourceOfData = data[i + 13],
+                            Source = data[i + 13],
                             EnableAccum = data[i + 14],
                             PointType = data[i + 15],
                             LoLimit = data[i + 16],
