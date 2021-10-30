@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using OfficeOpenXml;
 using System.IO;
+using System;
 
 namespace DatabaseCompare.Excel
 {
@@ -40,9 +41,9 @@ namespace DatabaseCompare.Excel
                 AceConfigWorksheet.Cells.LoadFromCollection(aceConfigs, false);
                 MultistateWorksheet.Cells.LoadFromCollection(multistates, false);
 
-                FileInfo excelFile = new FileInfo(@"D:\Marathon\dbCompare\" + name + ".xlsx");
-                excel.SaveAs(excelFile);
-            }
+            FileInfo excelFile = new FileInfo(filepath + name + ".xlsx");
+            excel.SaveAs(excelFile);
+            Console.WriteLine($"Generated file: {filepath}\\{name}.xlsx");
         }
     }
 }

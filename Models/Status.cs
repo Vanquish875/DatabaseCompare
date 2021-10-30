@@ -12,7 +12,7 @@ namespace DatabaseCompare.Models
         public string InhibitAbnormalLog { get; set; }
         public string InhibitNormalLog { get; set; }
         public string BaseMessage { get; set; }
-        public string RTU { get; set; }
+        public string Remote { get; set; }
         public string PriorityDisplay { get; set; }
         public string SafetyRelated { get; set; }
         public string HasInput { get; set; }
@@ -79,9 +79,9 @@ namespace DatabaseCompare.Models
                 this.BaseMessage.Equals(other.BaseMessage)
                 ) &&
                 (
-                object.ReferenceEquals(this.RTU, other.RTU) ||
-                this.RTU != null &&
-                this.RTU.Equals(other.RTU)
+                object.ReferenceEquals(this.Remote, other.Remote) ||
+                this.Remote != null &&
+                this.Remote.Equals(other.Remote)
                 ) &&
                 (
                 object.ReferenceEquals(this.PriorityDisplay, other.PriorityDisplay) ||

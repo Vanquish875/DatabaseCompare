@@ -19,7 +19,7 @@ namespace DatabaseCompare.Mapping
                     var analog = new Analog
                     {
                         Name = data[i],
-                        RTU = data[i + 1],
+                        Remote = data[i + 1],
                         Group = data[i + 2],
                         Station = data[i + 3],
                         OffNormalAlarm = data[i + 4],

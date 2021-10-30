@@ -44,6 +44,7 @@ namespace DatabaseCompare.Excel
 
             FileInfo excelFile = new FileInfo(FilePath + @"\" + name + ".xlsx");
             excel.SaveAs(excelFile);
+            Console.WriteLine($"Generated file: {FilePath}\\{name}.xlsx");
         }
 
         public void TNDTOPCCWriteToExcel(Dictionary<Analog, Analog> analogs, Dictionary<Rate, Rate> rates, Dictionary<Status, Status> status, Dictionary<Remote, Remote> remotes, string FilePath)
@@ -82,6 +83,7 @@ namespace DatabaseCompare.Excel
 
             FileInfo excelFile = new FileInfo(FilePath + @"\" + name + ".xlsx");
             excel.SaveAs(excelFile);
+            Console.WriteLine($"Generated file: {FilePath}\\{name}.xlsx");
         }
     }
 }
