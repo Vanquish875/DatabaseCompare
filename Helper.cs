@@ -6,32 +6,17 @@ namespace DatabaseCompare
     {
         public static string CleanFieldString(string line, string field)
         {
-            return RemoveWhiteSpace(line.Replace(field, ""));
+            return line.Replace(field, "").Trim();
         }
 
         public static bool CheckFields(string line, string field)
         {
-            if (line.StartsWith(field))
-            {
-                return true;
-            }
-
-            return false;
-        }
-
-        public static string RemoveWhiteSpace(string input)
-        {
-            return input.Trim();
+            return line.StartsWith(field);
         }
 
         public static bool CheckArguments(string[] arguments)
         {
-            if(arguments.Length == 3)
-            {
-                return true;
-            }
-
-            return false;
+            return arguments.Length == 3;
         }
 
         public static bool CheckForFilesInDirectory(string path)

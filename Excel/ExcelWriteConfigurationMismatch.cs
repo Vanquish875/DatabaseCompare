@@ -8,7 +8,8 @@ namespace DatabaseCompare.Excel
 {
     public class ExcelWriteConfigurationMismatch
     {
-        public void PCCTOTNDWriteToExcel(Dictionary<Analog, Analog> analogs, Dictionary<Rate, Rate> rates, Dictionary<Status, Status> status, Dictionary<Remote, Remote> remotes, string FilePath)
+        public void PCCTOTNDWriteToExcel(Dictionary<Analog, Analog> analogs, Dictionary<Rate, Rate> rates, 
+        Dictionary<Status, Status> status, Dictionary<Remote, Remote> remotes, string filePath)
         {
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
             string month = DateTime.Now.ToString("MM");
@@ -42,12 +43,13 @@ namespace DatabaseCompare.Excel
             RemotePCCWorksheet.Cells.LoadFromCollection(remotes.Keys, true);
             RemoteTNDWorksheet.Cells.LoadFromCollection(remotes.Values, true);
 
-            FileInfo excelFile = new FileInfo(FilePath + @"\" + name + ".xlsx");
+            FileInfo excelFile = new FileInfo(filePath + @"\" + name + ".xlsx");
             excel.SaveAs(excelFile);
-            Console.WriteLine($"Generated file: {FilePath}\\{name}.xlsx");
+            Console.WriteLine($"Generated file: {filePath}\\{name}.xlsx");
         }
 
-        public void TNDTOPCCWriteToExcel(Dictionary<Analog, Analog> analogs, Dictionary<Rate, Rate> rates, Dictionary<Status, Status> status, Dictionary<Remote, Remote> remotes, string FilePath)
+        public void TNDTOPCCWriteToExcel(Dictionary<Analog, Analog> analogs, Dictionary<Rate, Rate> rates, 
+        Dictionary<Status, Status> status, Dictionary<Remote, Remote> remotes, string filePath)
         {
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
             string month = DateTime.Now.ToString("MM");
@@ -81,9 +83,9 @@ namespace DatabaseCompare.Excel
             RemoteTNDWorksheet.Cells.LoadFromCollection(remotes.Keys, true);
             RemotePCCWorksheet.Cells.LoadFromCollection(remotes.Values, true);
 
-            FileInfo excelFile = new FileInfo(FilePath + @"\" + name + ".xlsx");
+            FileInfo excelFile = new FileInfo(filePath + @"\" + name + ".xlsx");
             excel.SaveAs(excelFile);
-            Console.WriteLine($"Generated file: {FilePath}\\{name}.xlsx");
+            Console.WriteLine($"Generated file: {filePath}\\{name}.xlsx");
         }
     }
 }

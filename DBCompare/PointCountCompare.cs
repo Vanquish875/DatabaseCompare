@@ -56,7 +56,7 @@ namespace DatabaseCompare.DBCompare
 
                 string name = "DBCompare_PCCToTND";
 
-                excel.WriteToExcel(name, analogs, rates, statuses, remotes, aceCodes, aceConfigs, connections, multistates);
+                excel.WriteToExcel(name, analogs, rates, statuses, remotes, aceCodes, aceConfigs, connections, multistates, FilePath);
             }
             
         }
@@ -84,7 +84,7 @@ namespace DatabaseCompare.DBCompare
 
                 string name = "DBCompare_TNDToPCC";
 
-                excel.WriteToExcel(name, analogs, rates, statuses, remotes, aceCodes, aceConfigs, connections, multistates);
+                excel.WriteToExcel(name, analogs, rates, statuses, remotes, aceCodes, aceConfigs, connections, multistates, FilePath);
             }  
         }
     }
