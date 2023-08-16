@@ -1,191 +1,46 @@
-﻿using System;
-
-namespace DatabaseCompare.Models
+﻿namespace DatabaseCompare.Models
 {
-    public class Rate : IEquatable<Rate>
+    public record Rate
     {
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public string Group { get; set; }
-        public string Remote { get; set; }
-        public string OffNormalAlarm { get; set; }
-        public string NormalAlarm { get; set; }
-        public string OffNormalLog { get; set; }
-        public string NormalLog { get; set; }
-        public string BaseMessage { get; set; }
-        public string MinEGU { get; set; }
-        public string MaxEGU { get; set; }
-        public string SourceOfData { get; set; }
-        public string EnableAccum { get; set; }
-        public string PointType { get; set; }
-        public string PriorityDisplay { get; set; }
-        public string SafetyRelated { get; set; }
-        public string PulseInputCoordinates { get; set; }
-        public string PulseInputType { get; set; }
-        public string PulseInRollover { get; set; }
-        public string AnalogInputType { get; set; }
-        public string AnalogInputCoordinates { get; set; }
-        public string ConvertRawToEGU { get; set; }
-        public string MinRaw { get; set; }
-        public string MaxRaw { get; set; }
-        public string IntegrationEGUUnits { get; set; }
-        public string RateEGUUnits { get; set; }
-        public string HasHiHiAlarm { get; set; }
-        public string HasHiAlarm { get; set; }
-        public string HasLoAlarm { get; set; }
-        public string HasLoLoAlarm { get; set; }
-        public string HiHiLimit { get; set; }
-        public string HiLimit { get; set; }
-        public string LoLimit { get; set; }
-        public string LoLoLimit { get; set; }
-        public string PointClass { get; set; }
-        public string PointSubClass { get; set; }
-        public string Station { get; set; }
-        public string ShortDesc { get; set; }
-        public string DisplayOrder { get; set; }
-        public string WellUnit { get; set; }
-
-        public override bool Equals(object obj)
-        {
-            return this.Equals(obj as Rate);
-        }
-
-        public bool Equals(Rate other)
-        {
-            if (other == null)
-                return false;
-
-            return
-                (
-                object.ReferenceEquals(this.Name, other.Name) ||
-                this.Name != null &&
-                this.Name.Equals(other.Name)
-                ) &&
-                (
-                object.ReferenceEquals(this.Description, other.Description) ||
-                this.Description != null &&
-                this.Description.Equals(other.Description)
-                ) &&
-                (
-                object.ReferenceEquals(this.Group, other.Group) ||
-                this.Group != null &&
-                this.Group.Equals(other.Group)
-                ) &&
-                (
-                object.ReferenceEquals(this.Remote, other.Remote) ||
-                this.Remote != null &&
-                this.Remote.Equals(other.Remote)
-                ) &&
-                (
-                object.ReferenceEquals(this.BaseMessage, other.BaseMessage) ||
-                this.BaseMessage != null &&
-                this.BaseMessage.Equals(other.BaseMessage)
-                ) &&
-                (
-                object.ReferenceEquals(this.MinEGU, other.MinEGU) ||
-                this.MinEGU != null &&
-                this.MinEGU.Equals(other.MinEGU)
-                ) &&
-                (
-                object.ReferenceEquals(this.MaxEGU, other.MaxEGU) ||
-                this.MaxEGU != null &&
-                this.MaxEGU.Equals(other.MaxEGU)
-                ) &&
-                (
-                object.ReferenceEquals(this.SourceOfData, other.SourceOfData) ||
-                this.SourceOfData != null &&
-                this.SourceOfData.Equals(other.SourceOfData)
-                ) &&
-                (
-                object.ReferenceEquals(this.PriorityDisplay, other.PriorityDisplay) ||
-                this.PriorityDisplay != null &&
-                this.PriorityDisplay.Equals(other.PriorityDisplay)
-                ) &&
-                (
-                object.ReferenceEquals(this.SafetyRelated, other.SafetyRelated) ||
-                this.SafetyRelated != null &&
-                this.SafetyRelated.Equals(other.SafetyRelated)
-                ) &&
-                (
-                object.ReferenceEquals(this.PulseInputCoordinates, other.PulseInputCoordinates) ||
-                this.PulseInputCoordinates != null &&
-                this.PulseInputCoordinates.Equals(other.PulseInputCoordinates)
-                ) &&
-                (
-                object.ReferenceEquals(this.PulseInputType, other.PulseInputType) ||
-                this.PulseInputType != null &&
-                this.PulseInputType.Equals(other.PulseInputType)
-                ) &&
-                (
-                object.ReferenceEquals(this.AnalogInputType, other.AnalogInputType) ||
-                this.AnalogInputType != null &&
-                this.AnalogInputType.Equals(other.AnalogInputType)
-                ) &&
-                (
-                object.ReferenceEquals(this.AnalogInputCoordinates, other.AnalogInputCoordinates) ||
-                this.AnalogInputCoordinates != null &&
-                this.AnalogInputCoordinates.Equals(other.AnalogInputCoordinates)
-                ) &&
-                (
-                object.ReferenceEquals(this.ConvertRawToEGU, other.ConvertRawToEGU) ||
-                this.ConvertRawToEGU != null &&
-                this.ConvertRawToEGU.Equals(other.ConvertRawToEGU)
-                ) &&
-                (
-                object.ReferenceEquals(this.MinRaw, other.MinRaw) ||
-                this.MinRaw != null &&
-                this.MinRaw.Equals(other.MinRaw)
-                ) &&
-                (
-                object.ReferenceEquals(this.MaxRaw, other.MaxRaw) ||
-                this.MaxRaw != null &&
-                this.MaxRaw.Equals(other.MaxRaw)
-                ) &&
-                (
-                object.ReferenceEquals(this.IntegrationEGUUnits, other.IntegrationEGUUnits) ||
-                this.IntegrationEGUUnits != null &&
-                this.IntegrationEGUUnits.Equals(other.IntegrationEGUUnits)
-                ) &&
-                (
-                object.ReferenceEquals(this.RateEGUUnits, other.RateEGUUnits) ||
-                this.RateEGUUnits != null &&
-                this.RateEGUUnits.Equals(other.RateEGUUnits)
-                ) &&
-                (
-                object.ReferenceEquals(this.HasHiAlarm, other.HasHiAlarm) ||
-                this.HasHiAlarm != null &&
-                this.HasHiAlarm.Equals(other.HasHiAlarm)
-                ) &&
-                (
-                object.ReferenceEquals(this.HasLoAlarm, other.HasLoAlarm) ||
-                this.HasLoAlarm != null &&
-                this.HasLoAlarm.Equals(other.HasLoAlarm)
-                ) &&
-                (
-                object.ReferenceEquals(this.HasLoLoAlarm, other.HasLoLoAlarm) ||
-                this.HasLoLoAlarm != null &&
-                this.HasLoLoAlarm.Equals(other.HasLoLoAlarm)
-                ) &&
-                (
-                object.ReferenceEquals(this.HiHiLimit, other.HiHiLimit) ||
-                this.HiHiLimit != null &&
-                this.HiHiLimit.Equals(other.HiHiLimit)
-                ) &&
-                (
-                object.ReferenceEquals(this.HiLimit, other.HiLimit) ||
-                this.HiLimit != null &&
-                this.HiLimit.Equals(other.HiLimit)
-                ) &&
-                (
-                object.ReferenceEquals(this.LoLimit, other.LoLimit) ||
-                this.LoLimit != null &&
-                this.LoLimit.Equals(other.LoLimit)
-                ) &&
-                (
-                object.ReferenceEquals(this.LoLoLimit, other.LoLoLimit) ||
-                this.LoLoLimit != null &&
-                this.LoLoLimit.Equals(other.LoLoLimit)
-                );
-        }
+        public string Name { get; init; }
+        public string Description { get; init; }
+        public string Group { get; init; }
+        public string Remote { get; init; }
+        public string OffNormalAlarm { get; init; }
+        public string NormalAlarm { get; init; }
+        public string OffNormalLog { get; init; }
+        public string NormalLog { get; init; }
+        public string BaseMessage { get; init; }
+        public string MinEGU { get; init; }
+        public string MaxEGU { get; init; }
+        public string SourceOfData { get; init; }
+        public string EnableAccum { get; init; }
+        public string PointType { get; init; }
+        public string PriorityDisplay { get; init; }
+        public string SafetyRelated { get; init; }
+        public string PulseInputCoordinates { get; init; }
+        public string PulseInputType { get; init; }
+        public string PulseInRollover { get; init; }
+        public string AnalogInputType { get; init; }
+        public string AnalogInputCoordinates { get; init; }
+        public string ConvertRawToEGU { get; init; }
+        public string MinRaw { get; init; }
+        public string MaxRaw { get; init; }
+        public string IntegrationEGUUnits { get; init; }
+        public string RateEGUUnits { get; init; }
+        public string HasHiHiAlarm { get; init; }
+        public string HasHiAlarm { get; init; }
+        public string HasLoAlarm { get; init; }
+        public string HasLoLoAlarm { get; init; }
+        public string HiHiLimit { get; init; }
+        public string HiLimit { get; init; }
+        public string LoLimit { get; init; }
+        public string LoLoLimit { get; init; }
+        public string PointClass { get; init; }
+        public string PointSubClass { get; init; }
+        public string Station { get; init; }
+        public string ShortDesc { get; init; }
+        public string DisplayOrder { get; init; }
+        public string WellUnit { get; init; }
     }
 }
